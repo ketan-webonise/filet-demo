@@ -43,7 +43,7 @@ function filterInit() {
                        amount: ['#price_filter .TYPE.range', 'amount']
                      },
     search: {input: '#search_box' },
-    and_filter_on: true,
+    and_filter_on: true
   };
 
   return FilterJS(services, "#service_list", view, settings);
