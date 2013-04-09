@@ -40,6 +40,7 @@ function filterInit() {
 
   var settings = {
     filter_criteria: {
+                       price: ['#price_list input:checkbox  .TYPE.range', 'amount'],
                        amount: ['#price_filter .TYPE.range', 'amount']
                      },
     search: {input: '#search_box' },
