@@ -20,141 +20,151 @@
         <h1 class="result_count"></h1>
         <div class="featured_list_find" id="service_list"></div>
       </div>
-      <script>
+
+      <script id="my_vars_json" type="text/json">
+       <%= @product.to_json %>
+        <div data-id="<%= @product.to_json %>"></div>
+        <!--console.log("@product")-->
+      </script>
+        <script type="text/javascript">
         //<![CDATA[
-        var services = [
-        {
-            "to_param": "1-mr-ona-howe",
-            "group_number": null,
-            "is_schedulelater": false,
-            "permalink": "1-mr-ona-howe",
-            "start_date": "2011-08-27",
-            "total_transactions": null,
-            "end_time": null,
-            "positive_reviews": 0,
-            "booking_capacity": 2,
-            "is_virtual": false,
-            "request_id": null,
-            "title": "Mr. Ona Howe",
-            "total_reviews": 0,
-            "estimated_duration": 0,
-            "thumbnail": "/images/category/cat_image_thumb.jpg",
-            "amount": 453,
-            "donated_amount": null,
-            "booked_seats": 0,
-            "id": 1,
-            "user_id": 3,
-            "is_public": true,
-            "service_categories": [
-                {
-                    "to_param": "1",
-                    "category_id": 33
-                }
-            ],
-            "end_date": "2011-07-30",
-            "nonprofit_id": 15,
-            "status": "active",
-            "start_time": null,
-            "nonprofit": {
-                "name": "Eldon Zulauf",
-                "to_param": "15-eldon-zulauf",
-                "nonprofit_categories": [
-                    {
-                        "to_param": "15",
-                        "category_id": 11
-                    }
-                ],
-                "thumbnail": "/images/missing/nonprofit_medium.jpg"
-            }
-        },
-        {
-            "to_param": "2-darien-hoeger",
-            "group_number": null,
-            "is_schedulelater": true,
-            "permalink": "2-darien-hoeger",
-            "start_date": "2011-08-23",
-            "total_transactions": null,
-            "end_time": null,
-            "positive_reviews": 0,
-            "booking_capacity": 0,
-            "is_virtual": false,
-            "request_id": null,
-            "title": "Darien Hoeger",
-            "total_reviews": 0,
-            "estimated_duration": 0,
-            "thumbnail": "/images/category/cat_image_thumb.jpg",
-            "amount": 201,
-            "donated_amount": null,
-            "booked_seats": 0,
-            "id": 2,
-            "user_id": 3,
-            "is_public": true,
-            "service_categories": [
-                {
-                    "to_param": "2",
-                    "category_id": 33
-                }
-            ],
-            "end_date": "2011-09-03",
-            "nonprofit_id": 16,
-            "status": "active",
-            "start_time": null,
-            "nonprofit": {
-                "name": "Beryl McDermott",
-                "to_param": "16-beryl-mcdermott",
-                "nonprofit_categories": [
-                    {
-                        "to_param": "16",
-                        "category_id": 26
-                    }
-                ],
-                "thumbnail": "/images/missing/nonprofit_medium.jpg"
-            }
-        },
-        {
-            "to_param": "3-mrs-frederique-kris",
-            "group_number": null,
-            "is_schedulelater": true,
-            "permalink": "3-mrs-frederique-kris",
-            "start_date": "2011-08-08",
-            "total_transactions": null,
-            "end_time": null,
-            "positive_reviews": 0,
-            "booking_capacity": 0,
-            "is_virtual": false,
-            "request_id": null,
-            "title": "Mrs. Frederique Kris",
-            "total_reviews": 0,
-            "estimated_duration": 0,
-            "thumbnail": "/images/category/cat_image_thumb.jpg",
-            "amount": 500,
-            "donated_amount": null,
-            "booked_seats": 0,
-            "id": 3,
-            "user_id": 3,
-            "is_public": true,
-            "service_categories": [
-                {
-                    "to_param": "3",
-                    "category_id": 27
-                }
-            ],
-            "end_date": "2011-08-16",
-            "nonprofit_id": 15,
-            "status": "active",
-            "start_time": null,
-            "nonprofit": {
-                "name": "Eldon Zulauf",
-                "to_param": "15-eldon-zulauf",
-                "nonprofit_categories": [
-                    {
-                        "to_param": "15",
-                        "category_id": 11
-                    }
-                ],
-                "thumbnail": "/images/missing/nonprofit_medium.jpg"
-            }
-        }];
+
+
+        var services = <%= @products.to_json %>;
+//        var services = [
+
+//        {
+//            "to_param": "1-mr-ona-howe",
+//            "group_number": null,
+//            "is_schedulelater": false,
+//            "permalink": "1-mr-ona-howe",
+//            "start_date": "2011-08-27",
+//            "total_transactions": null,
+//            "end_time": null,
+//            "positive_reviews": 0,
+//            "booking_capacity": 2,
+//            "is_virtual": false,
+//            "request_id": null,
+//            "title": "Mr. Ona Howe",
+//            "total_reviews": 0,
+//            "estimated_duration": 0,
+//            "thumbnail": "/images/category/cat_image_thumb.jpg",
+//            "amount": 453,
+//            "donated_amount": null,
+//            "booked_seats": 0,
+//            "id": 1,
+//            "user_id": 3,
+//            "is_public": true,
+//            "service_categories": [
+//                {
+//                    "to_param": "1",
+//                    "category_id": 33
+//                }
+//            ],
+//            "end_date": "2011-07-30",
+//            "nonprofit_id": 15,
+//            "status": "active",
+//            "start_time": null,
+//            "nonprofit": {
+//                "name": "Eldon Zulauf",
+//                "to_param": "15-eldon-zulauf",
+//                "nonprofit_categories": [
+//                    {
+//                        "to_param": "15",
+//                        "category_id": 11
+//                    }
+//                ],
+//                "thumbnail": "/images/missing/nonprofit_medium.jpg"
+//            }
+//        },
+//        {
+//            "to_param": "2-darien-hoeger",
+//            "group_number": null,
+//            "is_schedulelater": true,
+//            "permalink": "2-darien-hoeger",
+//            "start_date": "2011-08-23",
+//            "total_transactions": null,
+//            "end_time": null,
+//            "positive_reviews": 0,
+//            "booking_capacity": 0,
+//            "is_virtual": false,
+//            "request_id": null,
+//            "title": "Darien Hoeger",
+//            "total_reviews": 0,
+//            "estimated_duration": 0,
+//            "thumbnail": "/images/category/cat_image_thumb.jpg",
+//            "amount": 201,
+//            "donated_amount": null,
+//            "booked_seats": 0,
+//            "id": 2,
+//            "user_id": 3,
+//            "is_public": true,
+//            "service_categories": [
+//                {
+//                    "to_param": "2",
+//                    "category_id": 33
+//                }
+//            ],
+//            "end_date": "2011-09-03",
+//            "nonprofit_id": 16,
+//            "status": "active",
+//            "start_time": null,
+//            "nonprofit": {
+//                "name": "Beryl McDermott",
+//                "to_param": "16-beryl-mcdermott",
+//                "nonprofit_categories": [
+//                    {
+//                        "to_param": "16",
+//                        "category_id": 26
+//                    }
+//                ],
+//                "thumbnail": "/images/missing/nonprofit_medium.jpg"
+//            }
+//        },
+//        {
+//            "to_param": "3-mrs-frederique-kris",
+//            "group_number": null,
+//            "is_schedulelater": true,
+//            "permalink": "3-mrs-frederique-kris",
+//            "start_date": "2011-08-08",
+//            "total_transactions": null,
+//            "end_time": null,
+//            "positive_reviews": 0,
+//            "booking_capacity": 0,
+//            "is_virtual": false,
+//            "request_id": null,
+//            "title": "Mrs. Frederique Kris",
+//            "total_reviews": 0,
+//            "estimated_duration": 0,
+//            "thumbnail": "/images/category/cat_image_thumb.jpg",
+//            "amount": 500,
+//            "donated_amount": null,
+//            "booked_seats": 0,
+//            "id": 3,
+//            "user_id": 3,
+//            "is_public": true,
+//            "service_categories": [
+//                {
+//                    "to_param": "3",
+//                    "category_id": 27
+//                }
+//            ],
+//            "end_date": "2011-08-16",
+//            "nonprofit_id": 15,
+//            "status": "active",
+//            "start_time": null,
+//            "nonprofit": {
+//                "name": "Eldon Zulauf",
+//                "to_param": "15-eldon-zulauf",
+//                "nonprofit_categories": [
+//                    {
+//                        "to_param": "15",
+//                        "category_id": 11
+//                    }
+//                ],
+//                "thumbnail": "/images/missing/nonprofit_medium.jpg"
+//            }
+//       ];
         //]]>
       </script>
       <div class="clear"></div>
